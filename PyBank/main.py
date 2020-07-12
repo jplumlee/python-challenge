@@ -72,6 +72,8 @@ with open(csvpath, newline='') as csvfile:
     #Write the results to budget_results.txt in the specifed file path.
     with open(text_file, "w") as file:
         # \n creates a break so that the results are displayed correctly in the text file
+        file.write("Financial Analysis \n")
+        file.write("-------------------------- \n")
         file.write(f"Number of Months: {months} \n")
         file.write(f"Total: ${revenue_total} \n")
         file.write(f"Average Change: ${round(total_average_change, 2)}\n")
