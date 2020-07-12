@@ -2,6 +2,7 @@ import os
 import csv
 
 csvpath = os.path.join('Resources', 'budget_data.csv')
+text_file = os.path.join('Analysis', 'budget_results.txt')
 
 monthlyaveragechangelist = []
 
@@ -54,3 +55,10 @@ with open(csvpath, newline='') as csvfile:
     print(f"Average Change: ${round(totalaveragechange, 2)}")
     print(f"Greatest Increase in Profits: {gincreasemonth} (${gincrease})")
     print(f"Greatest Decrease in Profits: {gdecreasemonth} (${gdecrease})")
+
+    with open(text_file, "w") as file:
+        file.write(f"Number of Months: {months} \n")
+        file.write(f"Total: ${revenuetotal} \n")
+        file.write(f"Average Change: ${round(totalaveragechange, 2)}\n")
+        file.write(f"Greatest Increase in Profits: {gincreasemonth} (${gincrease})\n")
+        file.write(f"Greatest Decrease in Profits: {gdecreasemonth} (${gdecrease})\n")
