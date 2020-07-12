@@ -61,6 +61,8 @@ with open(csvpath, newline='') as csvfile:
             gdecrease_month = row[0]
     
     #Print the results to the terminal
+    print("Financial Analysis")
+    print("--------------------------")
     print(f"Number of Months: {months}")
     print(f"Total: ${revenue_total}")
     print(f"Average Change: ${round(total_average_change, 2)}")
