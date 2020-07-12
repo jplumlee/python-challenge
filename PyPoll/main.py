@@ -2,6 +2,7 @@ import os
 import csv
 
 csvpath = os.path.join('Resources', 'election_data.csv')
+text_file = os.path.join('Analysis', 'election_results.txt')
 
 totalvoteslist = []
 candidatesNamesdict = {}
@@ -45,3 +46,15 @@ with open(csvpath, newline='') as csvfile:
     print("------------------------")
     print(f"Winner: {winner}")
     print("------------------------")
+
+    with open(text_file, "w") as file:
+        file.write("Election Results \n")
+        file.write("------------------------\n")
+        file.write(f"Total Votes: {totalvotes}\n")
+        file.write("------------------------\n")
+        for key, val in candidatesNamesdict.items():
+            file.write(f"{key}: {round(val/totalvotes * 100, 2)}% ({val}) \n")
+        file.write("------------------------\n")
+        file.write(f"Winner: {winner}\n")
+        file.write("------------------------\n")
+        file.close()
