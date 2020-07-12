@@ -14,6 +14,7 @@ An "analysis" folder that contains your text file that has the results from your
 
 Push the above changes to GitHub or GitLab.
 
+
 PyBank
 
 In this challenge, you are tasked with creating a Python script for analyzing the financial records of your company. You will give a set of financial data called
@@ -33,11 +34,13 @@ The greatest decrease in losses (date and amount) over the entire period
 
 In addition, your final script should both print the analysis to the terminal and export a text file with the results.
 
+
 PyPoll
 
 In this challenge, you are tasked with helping a small, rural town modernize its vote counting process.
 
-You will be give a set of poll data called election_data.csv. The dataset is composed of three columns: Voter ID, County, and Candidate. Your task is to create a Python script that analyzes the votes and calculates each of the following:
+You will be give a set of poll data called election_data.csv. The dataset is composed of three columns: Voter ID, County, and Candidate. Your task is to create a Python script
+that analyzes the votes and calculates each of the following:
 
 The total number of votes cast
 
